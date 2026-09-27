@@ -23,7 +23,7 @@ jobs:
       - name: Build APK
         run: gradle --no-daemon assembleRelease
       - name: Prepare APK
-        run: cp app/build/outputs/apk/release/app-release-unsigned.apk GenioQuest.apk
+        run: cp app/build/outputs/apk/release/app-release.apk GenioQuest.apk
       - name: Attach APK to GitHub Release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
